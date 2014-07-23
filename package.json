@@ -1,0 +1,23 @@
+{
+  "name": "shim-gauss",
+  "version": "0.0.0",
+  "description": "Example of using browserify-shim to shim gauss for use with browserify",
+  "main": "./app.js",
+  "x-browser": {
+    "gauss": "./node_modules/gauss/index.js"
+  },
+  "x-browserify-shim": {
+    "gauss": { "exports": "gauss" }
+  },
+  "x-browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "repository": "https://github.com/shimikano/shim-gauss.git",
+  "devDependencies": {
+    "browserify": "4.2.3",
+    "browserify-shim": "3.6.0",
+    "gauss": "0.2.12"
+  }
+}
